@@ -1,30 +1,66 @@
 import { motion } from "framer-motion";
+import { Code2, BrainCircuit, LayoutTemplate, Database, Cloud } from "lucide-react";
 
 const SKILL_CATEGORIES = [
   {
     title: "Languages",
     color: "neon-blue",
-    skills: ["Python", "Java", "C", "JavaScript"]
+    icon: <Code2 className="w-7 h-7" />,
+    skills: [
+      { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" },
+      { name: "Java", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" },
+      { name: "C", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" },
+      { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" }
+    ]
   },
   {
     title: "AI & Machine Learning",
     color: "neon-purple",
-    skills: ["TensorFlow", "Scikit-learn", "OpenCV", "Deep Learning", "Computer Vision"]
+    icon: <BrainCircuit className="w-7 h-7" />,
+    skills: [
+      { name: "TensorFlow", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg" },
+      { name: "Scikit-learn", icon: "https://cdn.simpleicons.org/scikitlearn/F7931E" },
+      { name: "OpenCV", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/opencv/opencv-original.svg" },
+      { name: "Deep Learning", icon: null },
+      { name: "Computer Vision", icon: null }
+    ]
   },
   {
     title: "Frontend",
     color: "cyan-400",
-    skills: ["HTML5", "CSS3", "React.js", "Bootstrap", "JavaScript"]
+    icon: <LayoutTemplate className="w-7 h-7" />,
+    skills: [
+      { name: "HTML5", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" },
+      { name: "CSS3", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" },
+      { name: "React.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" },
+      { name: "Bootstrap", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" },
+      { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" }
+    ]
   },
   {
     title: "Backend & Databases",
     color: "green-400",
-    skills: ["FastAPI", "REST APIs", "PostgreSQL", "SQL", "Supabase"]
+    icon: <Database className="w-7 h-7" />,
+    skills: [
+      { name: "FastAPI", icon: "https://cdn.simpleicons.org/fastapi/009688" },
+      { name: "REST APIs", icon: null },
+      { name: "PostgreSQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" },
+      { name: "SQL", icon: null },
+      { name: "Supabase", icon: "https://cdn.simpleicons.org/supabase/3ECF8E" }
+    ]
   },
   {
     title: "Cloud & DevOps",
     color: "gray-300",
-    skills: ["Docker", "Vercel", "Netlify", "Git", "GitHub", "n8n"]
+    icon: <Cloud className="w-7 h-7" />,
+    skills: [
+      { name: "Docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" },
+      { name: "Vercel", icon: "https://cdn.simpleicons.org/vercel/white" },
+      { name: "Netlify", icon: "https://cdn.simpleicons.org/netlify/00C7B7" },
+      { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" },
+      { name: "GitHub", icon: "https://cdn.simpleicons.org/github/white" },
+      { name: "n8n", icon: "https://cdn.simpleicons.org/n8n/ff6666" }
+    ]
   }
 ];
 
@@ -40,8 +76,8 @@ export function Skills() {
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 100 } }
+    hidden: { opacity: 0, y: 30 },
+    show: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 80 } }
   };
 
   return (
@@ -64,33 +100,38 @@ export function Skills() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: "-50px" }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 max-w-7xl mx-auto"
         >
-          {SKILL_CATEGORIES.map((category, idx) => (
-            <motion.div 
-              key={idx} 
-              variants={itemVariants}
-              className="glass p-6 rounded-3xl flex flex-col h-full border border-glass-border transition-shadow"
-            >
-              <h3 className={`text-xl font-bold mb-6 text-${category.color} tracking-wide uppercase border-b border-glass-border pb-4`}>
-                {category.title}
-              </h3>
-              
-              <div className="flex flex-wrap gap-3">
-                {category.skills.map((skill, sIdx) => (
-                  <motion.div
-                    key={sIdx}
-                    drag
-                    dragSnapToOrigin
-                    dragElastic={0.2}
-                    className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-gray-200 transition-colors shadow-sm"
-                  >
-                    {skill}
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          ))}
+          {SKILL_CATEGORIES.map((category, idx) => {
+            const colSpanClass = idx < 2 ? "lg:col-span-3" : "lg:col-span-2";
+            return (
+              <motion.div 
+                key={idx} 
+                variants={itemVariants}
+                className={`glass p-6 md:p-8 rounded-[2rem] border border-glass-border flex flex-col items-center text-center transition-all ${colSpanClass}`}
+              >
+                <div className={`p-4 rounded-2xl bg-white/5 border border-white/10 mb-6 text-${category.color} shadow-inner`}>
+                  {category.icon}
+                </div>
+                
+                <h3 className="text-xl font-bold mb-6 text-white tracking-widest uppercase">
+                  {category.title}
+                </h3>
+                
+                <div className="flex flex-wrap justify-center gap-2 md:gap-3 mt-auto w-full">
+                  {category.skills.map((skill, sIdx) => (
+                    <span
+                      key={sIdx}
+                      className="px-3 py-2 flex items-center gap-2 rounded-xl bg-black/50 border border-white/5 text-sm text-gray-200 font-medium tracking-wide shadow-sm"
+                    >
+                      {skill.icon && <img src={skill.icon} alt={skill.name} className="w-5 h-5 object-contain" />}
+                      {skill.name}
+                    </span>
+                  ))}
+                </div>
+              </motion.div>
+            );
+          })}
         </motion.div>
         
       </div>

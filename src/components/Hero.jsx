@@ -25,24 +25,24 @@ export function Hero() {
       </div>
 
       <div className="container mx-auto px-4 md:px-8 z-10">
-        
+
         {/* Text Content */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="flex flex-col justify-center max-w-4xl text-left"
         >
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
             className="text-gray-400 font-medium tracking-widest uppercase mb-4"
           >
-            AI/ML Engineer · Full-Stack Developer · Computer Vision
+            AI/ML Engineer · Full-Stack Developer
           </motion.h2>
-          
-          <motion.h1 
+
+          <motion.h1
             initial="hidden"
             animate="visible"
             variants={{
@@ -55,7 +55,7 @@ export function Hero() {
             className="text-5xl md:text-7xl font-bold mb-6 tracking-tight"
           >
             {"Hi, I'm".split("").map((char, index) => (
-              <motion.span 
+              <motion.span
                 key={`hi-${index}`}
                 variants={{
                   hidden: { opacity: 0, y: 20 },
@@ -65,10 +65,10 @@ export function Hero() {
                 {char}
               </motion.span>
             ))}
-            <br/>
+            <br />
             <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 whitespace-nowrap">
               {"Vasumani L".split("").map((char, index) => (
-                <motion.span 
+                <motion.span
                   key={`name-${index}`}
                   variants={{
                     hidden: { opacity: 0, scale: 0.5 },
@@ -81,8 +81,8 @@ export function Hero() {
               ))}
             </span>
           </motion.h1>
-          
-          <motion.p 
+
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
@@ -90,14 +90,14 @@ export function Hero() {
           >
             Building intelligent systems, scalable web applications, and automation-driven solutions. Skilled in delivering end-to-end, data-driven projects with innovation and technical proficiency.
           </motion.p>
-          
-          <motion.div 
+
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
             className="flex flex-col sm:flex-row items-start sm:items-center gap-6"
           >
-            <motion.a 
+            <motion.a
               href="/Vasumani_L_Resume.pdf"
               download="Vasumani_L_Resume.pdf"
               whileHover={{ scale: 1.05 }}
@@ -108,7 +108,7 @@ export function Hero() {
               <Download size={20} />
               Download Resume
             </motion.a>
-            
+
             <div className="flex items-center gap-4">
               <SocialIcon href="https://github.com/vasumani01" icon={<Github />} hoverColor="hover:text-neon-blue" />
               <SocialIcon href="https://www.linkedin.com/in/vasumani-l/" icon={<Linkedin />} hoverColor="hover:text-neon-blue" />
@@ -116,11 +116,11 @@ export function Hero() {
             </div>
           </motion.div>
         </motion.div>
-        
+
       </div>
-      
+
       {/* Scroll indicator */}
-      <motion.div 
+      <motion.div
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center text-gray-500"
@@ -134,7 +134,7 @@ export function Hero() {
 
 function SocialIcon({ icon, href, hoverColor }) {
   return (
-    <a 
+    <a
       href={href}
       target={href.startsWith('http') ? "_blank" : "_self"}
       rel="noopener noreferrer"
