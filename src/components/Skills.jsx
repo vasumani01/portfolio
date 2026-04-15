@@ -70,7 +70,7 @@ export function Skills() {
             <motion.div 
               key={idx} 
               variants={itemVariants}
-              className="glass p-6 rounded-3xl flex flex-col h-full border border-glass-border hover:shadow-neon-blue/10 transition-shadow"
+              className="glass p-6 rounded-3xl flex flex-col h-full border border-glass-border transition-shadow"
             >
               <h3 className={`text-xl font-bold mb-6 text-${category.color} tracking-wide uppercase border-b border-glass-border pb-4`}>
                 {category.title}
@@ -83,10 +83,7 @@ export function Skills() {
                     drag
                     dragSnapToOrigin
                     dragElastic={0.2}
-                    whileHover={{ y: -5, scale: 1.05 }}
-                    whileDrag={{ scale: 1.1, zIndex: 10 }}
-                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                    className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-gray-200 hover:bg-white/10 hover:border-white/30 transition-colors shadow-sm cursor-grab active:cursor-grabbing"
+                    className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm text-gray-200 transition-colors shadow-sm"
                   >
                     {skill}
                   </motion.div>

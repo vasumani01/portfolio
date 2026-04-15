@@ -70,31 +70,30 @@ export function Projects() {
                   } 
                 }
               }}
-              whileHover={{ scale: 1.03, rotateX: 2, rotateY: -2, z: 20 }}
               style={{ transformStyle: "preserve-3d" }}
-              className="glass rounded-3xl overflow-hidden group relative flex flex-col h-full border border-glass-border hover:border-white/20 transition-all duration-300 shadow-[0_0_15px_rgba(0,0,0,0.5)]"
+              className="glass rounded-3xl overflow-hidden group relative flex flex-col h-full border border-glass-border transition-all duration-300 shadow-[0_0_15px_rgba(0,0,0,0.5)]"
             >
-              {/* Animated Gradient Background on Hover */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10`}></div>
+              {/* Static background instead of hover gradient */}
+              <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-20 -z-10`}></div>
               
               <div className="p-8 flex-grow flex flex-col z-10" style={{ transformStyle: "preserve-3d", transform: "translateZ(30px)" }}>
                 <motion.div variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }} className="flex justify-between items-start mb-6">
-                  <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 group-hover:scale-110 transition-transform">
-                    <Github className="w-6 h-6 text-gray-300 group-hover:text-white" />
+                  <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center border border-white/10">
+                    <Github className="w-6 h-6 text-gray-300" />
                   </div>
                   <div className="flex gap-4">
                     <a 
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-400 hover:text-white hover:scale-110 transition-all"
+                      className="text-gray-400 transition-all"
                     >
                       <Github size={20} />
                     </a>
                   </div>
                 </motion.div>
 
-                <motion.h3 variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }} className="text-2xl font-bold mb-3 text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-gray-400 transition-all">
+                <motion.h3 variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }} className="text-2xl font-bold mb-3 text-white transition-all">
                   {project.title}
                 </motion.h3>
                 

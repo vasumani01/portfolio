@@ -58,17 +58,15 @@ export function About() {
                 opacity: { duration: 0.5, delay: idx * 0.1 },
                 y: { duration: 4, repeat: Infinity, repeatType: "reverse", ease: "easeInOut", delay: idx * 0.2 }
               }}
-              whileHover={{ scale: 1.05, translateY: -10 }}
-              className="glass p-8 rounded-3xl border border-glass-border hover:border-neon-blue/50 transition-colors group"
+              className="glass p-8 rounded-3xl border border-glass-border transition-colors group"
             >
               <motion.div 
                 className="transform transition-transform"
-                whileHover={{ rotate: 360, scale: 1.2 }}
                 transition={{ duration: 0.6, ease: "backOut" }}
               >
                 {col.icon}
               </motion.div>
-              <h3 className="text-xl font-bold mb-3 text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-neon-blue group-hover:via-cyan-300 group-hover:to-neon-blue group-hover:bg-[length:200%_auto] group-hover:animate-gradient transition-all">
+              <h3 className="text-xl font-bold mb-3 text-white transition-all">
                 {col.title}
               </h3>
               <p className="text-gray-400 text-sm leading-relaxed">

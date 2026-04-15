@@ -66,12 +66,11 @@ export function Achievements() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6, type: "spring", stiffness: 60 }}
-              whileHover={{ scale: 1.02, x: idx % 2 === 0 ? 10 : -10 }}
               className="glass p-6 md:p-8 rounded-3xl border border-glass-border flex flex-col md:flex-row items-start md:items-center gap-6 relative overflow-hidden group"
             >
-              <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-neon-blue to-neon-purple opacity-50 group-hover:opacity-100 transition-opacity"></div>
+              <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-neon-blue to-neon-purple opacity-50 transition-opacity"></div>
               
-              <div className="w-14 h-14 shrink-0 rounded-2xl bg-white/5 flex items-center justify-center border border-white/10 group-hover:bg-white/10 transition-colors shadow-[0_0_15px_rgba(0,0,0,0.5)]">
+              <div className="w-14 h-14 shrink-0 rounded-2xl bg-white/5 flex items-center justify-center border border-white/10 transition-colors shadow-[0_0_15px_rgba(0,0,0,0.5)]">
                 {item.icon}
               </div>
               

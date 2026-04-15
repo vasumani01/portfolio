@@ -98,7 +98,8 @@ export function Hero() {
             className="flex flex-col sm:flex-row items-start sm:items-center gap-6"
           >
             <motion.a 
-              href="/resume.pdf" 
+              href="/Vasumani_L_Resume.pdf"
+              download="Vasumani_L_Resume.pdf"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
