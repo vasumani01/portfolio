@@ -4,28 +4,28 @@ import { CheckCircle2, GraduationCap, Laptop, Trophy } from "lucide-react";
 
 const ACHIEVEMENTS = [
   {
-    icon: <GraduationCap className="w-6 h-6 text-neon-blue" />,
-    title: "AI/ML Course Completed",
-    description: "Mastered fundamental concepts of Machine Learning, Deep Learning, and Neural Networks.",
-    date: "Recent"
+    icon: <Laptop className="w-6 h-6 text-neon-blue" />,
+    title: "Web Developer Intern — Femtosoft Technologies",
+    description: "Built dynamic, responsive websites using HTML5, CSS3, and JavaScript. Reduced page load times by 25% through front-end optimization techniques.",
+    date: "Jun – Jul 2025"
   },
   {
-    icon: <Laptop className="w-6 h-6 text-neon-purple" />,
-    title: "Building Real-World ML Projects",
-    description: "Developed and deployed functional models like Face Detection and Emotion Recognition systems.",
-    date: "Ongoing"
-  },
-  {
-    icon: <CheckCircle2 className="w-6 h-6 text-cyan-400" />,
-    title: "Learning Modern Frontend",
-    description: "Acquired skills in React, Vite, and Tailwind CSS to build dynamic and responsive interfaces.",
-    date: "Continuous"
+    icon: <GraduationCap className="w-6 h-6 text-neon-purple" />,
+    title: "B.E. Computer Science & Engineering",
+    description: "Loyola Institute of Technology, Kanyakumari, Tamil Nadu. Focused on AI, Machine Learning, and modern software development.",
+    date: "2022 – 2026"
   },
   {
     icon: <Trophy className="w-6 h-6 text-yellow-500" />,
-    title: "Practicing Coding Challenges",
-    description: "Actively solving algorithmic problems to enhance analytical and problem-solving abilities.",
-    date: "Daily"
+    title: "AI/ML & Deep Learning Certifications",
+    description: "Certified in AI/ML (2024) and Deep Learning (2025) from Feathers Softwares. Mastered neural networks, computer vision, and model deployment.",
+    date: "2024 – 2025"
+  },
+  {
+    icon: <CheckCircle2 className="w-6 h-6 text-cyan-400" />,
+    title: "C Programming Certification — NSDCA",
+    description: "National Skill Development Certification Authority recognized proficiency in C programming fundamentals and systems-level development.",
+    date: "2023"
   }
 ];
 
@@ -47,7 +47,7 @@ export function Achievements() {
             viewport={{ once: true }}
             className="text-4xl md:text-5xl font-bold inline-block"
           >
-            Learning <span className="text-indigo-400">Journey</span>
+            Experience & <span className="text-indigo-400">Certifications</span>
           </motion.h2>
         </div>
 

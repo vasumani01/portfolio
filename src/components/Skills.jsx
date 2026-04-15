@@ -2,24 +2,29 @@ import { motion } from "framer-motion";
 
 const SKILL_CATEGORIES = [
   {
-    title: "Programming",
+    title: "Languages",
     color: "neon-blue",
-    skills: ["Python", "Java", "JavaScript"]
+    skills: ["Python", "Java", "C", "JavaScript"]
   },
   {
-    title: "Web Development",
+    title: "AI & Machine Learning",
     color: "neon-purple",
-    skills: ["HTML", "CSS", "React", "Bootstrap", "Angular basics"]
+    skills: ["TensorFlow", "Scikit-learn", "OpenCV", "Deep Learning", "Computer Vision"]
   },
   {
-    title: "AI / ML",
+    title: "Frontend",
     color: "cyan-400",
-    skills: ["Machine Learning", "OpenCV", "Data Analysis", "NumPy", "Pandas", "Matplotlib"]
+    skills: ["HTML5", "CSS3", "React.js", "Bootstrap", "JavaScript"]
   },
   {
-    title: "Tools",
+    title: "Backend & Databases",
+    color: "green-400",
+    skills: ["FastAPI", "REST APIs", "PostgreSQL", "SQL", "Supabase"]
+  },
+  {
+    title: "Cloud & DevOps",
     color: "gray-300",
-    skills: ["Git", "GitHub", "VS Code", "Linux basics"]
+    skills: ["Docker", "Vercel", "Netlify", "Git", "GitHub", "n8n"]
   }
 ];
 

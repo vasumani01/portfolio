@@ -1,26 +1,26 @@
 import { motion } from "framer-motion";
-import { BrainCircuit, Code2, LayoutTemplate, Lightbulb } from "lucide-react";
+import { BrainCircuit, Code2, LayoutTemplate, Server } from "lucide-react";
 
 const ABOUT_HIGHLIGHTS = [
   {
     icon: <BrainCircuit className="w-8 h-8 text-neon-purple mb-4" />,
-    title: "AI/ML Enthusiast",
-    description: "Passionate about building intelligent systems and deploying machine learning models."
+    title: "AI & Computer Vision",
+    description: "Building intelligent systems with TensorFlow, OpenCV, and deep learning for real-world applications like face recognition."
   },
   {
     icon: <Code2 className="w-8 h-8 text-neon-blue mb-4" />,
-    title: "Python Developer",
-    description: "Experienced in crafting efficient backends, scripts, and data processing pipelines."
+    title: "Full-Stack Developer",
+    description: "Crafting modern, responsive web apps with React.js, HTML5, CSS3, and JavaScript — from UI to deployment on Vercel & Netlify."
   },
   {
-    icon: <LayoutTemplate className="w-8 h-8 text-cyan-400 mb-4" />,
-    title: "Frontend Developer",
-    description: "Creating modern, interactive, and beautiful user interfaces with React."
+    icon: <Server className="w-8 h-8 text-cyan-400 mb-4" />,
+    title: "Backend & APIs",
+    description: "Developing scalable REST APIs with FastAPI, backed by PostgreSQL and Supabase databases for production-grade systems."
   },
   {
-    icon: <Lightbulb className="w-8 h-8 text-yellow-400 mb-4" />,
-    title: "Problem Solver",
-    description: "Enjoying tackling complex challenges with elegant and robust code solutions."
+    icon: <LayoutTemplate className="w-8 h-8 text-yellow-400 mb-4" />,
+    title: "Automation & DevOps",
+    description: "Automating workflows with n8n, Docker, and CI/CD pipelines — deploying AI agents and streamlining development processes."
   }
 ];
 
@@ -40,9 +40,10 @@ export function About() {
             About <span className="text-indigo-400">Me</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-            I am a Computer Science Engineering student passionate about Artificial Intelligence, 
-            Machine Learning, and modern web development. I enjoy building intelligent systems, 
-            solving real-world problems with code, and continuously improving my technical skills.
+            Detail-oriented and highly motivated professional with hands-on experience in artificial intelligence 
+            and modern software development. Proven ability to build intelligent systems, scalable web applications, 
+            and automation-driven solutions. Currently pursuing B.E. in Computer Science at Loyola Institute of Technology, 
+            Kanyakumari, Tamil Nadu (2022–2026).
           </p>
         </motion.div>
 

@@ -3,31 +3,31 @@ import { Github } from "lucide-react";
 
 const PROJECTS = [
   {
-    title: "Face Detection System",
-    description: "Built a real-time face detection system using Python and OpenCV capable of identifying faces from webcam input.",
-    tech: ["Python", "OpenCV"],
-    github: "https://github.com/vasumani01",
+    title: "AI Face Recognition System",
+    description: "Designed and deployed a real-time face recognition system for high-security environments, enabling automated identity verification, centralized monitoring, and blacklist-based alerts with 95%+ accuracy. Built with scalable REST APIs and a PostgreSQL-backed architecture.",
+    tech: ["Python", "OpenCV", "FastAPI", "PostgreSQL", "TensorFlow"],
+    github: "https://github.com/vasumani01/AI-Face-Recognition",
     color: "from-blue-500/20 to-cyan-500/20"
   },
   {
-    title: "Emotion Detection",
-    description: "Machine learning model that detects human emotions from facial expressions accurately.",
-    tech: ["Machine Learning", "Python"],
-    github: "https://github.com/vasumani01",
+    title: "AI SEO Agent",
+    description: "Architected a self-hosted AI automation agent to generate and publish 4+ SEO-optimized blogs per month. Integrated search analytics, generative AI, and automated workflows with editorial approval via Telegram and seamless cloud-based publishing.",
+    tech: ["n8n", "Docker", "OpenAI API", "PostgreSQL", "Supabase", "Telegram Bot"],
+    github: "https://github.com/vasumani01/AI--SEO--agent",
     color: "from-purple-500/20 to-pink-500/20"
   },
   {
-    title: "Sports Performance Analysis",
-    description: "Computer vision project to analyze sports performance metrics using OpenCV.",
-    tech: ["Python", "OpenCV", "Computer Vision"],
+    title: "Employee Management System",
+    description: "Built a full-featured, responsive web application to streamline employee data management and organizational workflows. Scalable platform handling 100+ employee records, deployed on Vercel with CI/CD pipeline for fast load times and continuous delivery.",
+    tech: ["HTML5", "CSS3", "JavaScript", "React.js", "Vercel"],
     github: "https://github.com/vasumani01",
     color: "from-green-500/20 to-emerald-500/20"
   },
   {
-    title: "Portfolio Website",
-    description: "Personal portfolio built using React with modern UI animations and a futuristic theme.",
-    tech: ["React", "Tailwind CSS", "Framer Motion"],
-    github: "https://github.com/vasumani01",
+    title: "Emotion Detection",
+    description: "Machine learning model that detects human emotions from facial expressions using deep learning. Trained on image datasets to accurately classify emotions in real-time for human-computer interaction applications.",
+    tech: ["Python", "Machine Learning", "Deep Learning", "Jupyter Notebook"],
+    github: "https://github.com/vasumani01/Emotion-Detection",
     color: "from-orange-500/20 to-yellow-500/20"
   }
 ];

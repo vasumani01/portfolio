@@ -39,7 +39,7 @@ export function Hero() {
             transition={{ delay: 0.2 }}
             className="text-gray-400 font-medium tracking-widest uppercase mb-4"
           >
-            AI/ML Engineer | Software Developer
+            AI/ML Engineer · Full-Stack Developer · Computer Vision
           </motion.h2>
           
           <motion.h1 
@@ -67,7 +67,7 @@ export function Hero() {
             ))}
             <br/>
             <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 whitespace-nowrap">
-              {"Vasu Mani".split("").map((char, index) => (
+              {"Vasumani L".split("").map((char, index) => (
                 <motion.span 
                   key={`name-${index}`}
                   variants={{
@@ -88,7 +88,7 @@ export function Hero() {
             transition={{ delay: 0.4 }}
             className="text-xl text-gray-300 max-w-2xl mb-10 leading-relaxed"
           >
-            "Building intelligent systems and modern web applications."
+            Building intelligent systems, scalable web applications, and automation-driven solutions. Skilled in delivering end-to-end, data-driven projects with innovation and technical proficiency.
           </motion.p>
           
           <motion.div 
@@ -110,7 +110,7 @@ export function Hero() {
             
             <div className="flex items-center gap-4">
               <SocialIcon href="https://github.com/vasumani01" icon={<Github />} hoverColor="hover:text-neon-blue" />
-              <SocialIcon href="https://www.linkedin.com/in/vasu-mani-4302112a4/" icon={<Linkedin />} hoverColor="hover:text-neon-blue" />
+              <SocialIcon href="https://www.linkedin.com/in/vasumani-l/" icon={<Linkedin />} hoverColor="hover:text-neon-blue" />
               <SocialIcon href="#contact" icon={<Mail />} hoverColor="hover:text-neon-purple" />
             </div>
           </motion.div>

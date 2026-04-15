@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, Send } from "lucide-react";
+import { Github, Linkedin, Mail, Phone, MapPin, Send } from "lucide-react";
 
 export function Contact() {
   return (
@@ -39,15 +39,35 @@ export function Contact() {
               </p>
               
               <div className="space-y-6">
-                <a href="mailto:vasumani@example.com" className="flex items-center gap-4 text-gray-300 hover:text-neon-blue transition-colors group">
+                <a href="mailto:vasumani1922@gmail.com" className="flex items-center gap-4 text-gray-300 hover:text-neon-blue transition-colors group">
                   <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 group-hover:border-neon-blue/50 group-hover:bg-neon-blue/10 transition-all">
                     <Mail size={20} />
                   </div>
                   <div>
                     <p className="text-sm text-gray-500 font-medium">Email</p>
-                    <p className="font-semibold">Drop me an email</p>
+                    <p className="font-semibold">vasumani1922@gmail.com</p>
                   </div>
                 </a>
+                
+                <a href="tel:+916383769127" className="flex items-center gap-4 text-gray-300 hover:text-neon-blue transition-colors group">
+                  <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 group-hover:border-neon-blue/50 group-hover:bg-neon-blue/10 transition-all">
+                    <Phone size={20} />
+                  </div>
+                  <div>
+                    <p className="text-sm text-gray-500 font-medium">Phone</p>
+                    <p className="font-semibold">+91 63837 69127</p>
+                  </div>
+                </a>
+
+                <div className="flex items-center gap-4 text-gray-300 group">
+                  <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center border border-white/10">
+                    <MapPin size={20} />
+                  </div>
+                  <div>
+                    <p className="text-sm text-gray-500 font-medium">Location</p>
+                    <p className="font-semibold">Vallioor, Tamil Nadu, India</p>
+                  </div>
+                </div>
                 
                 <a href="https://github.com/vasumani01" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 text-gray-300 hover:text-white transition-colors group">
                   <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 group-hover:border-white/50 group-hover:bg-white/10 transition-all">
@@ -59,13 +79,13 @@ export function Contact() {
                   </div>
                 </a>
                 
-                <a href="https://www.linkedin.com/in/vasu-mani-4302112a4/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 text-gray-300 hover:text-neon-blue transition-colors group">
+                <a href="https://www.linkedin.com/in/vasumani-l/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 text-gray-300 hover:text-neon-blue transition-colors group">
                   <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center border border-white/10 group-hover:border-blue-500/50 group-hover:bg-blue-500/10 transition-all">
                     <Linkedin size={20} />
                   </div>
                   <div>
                     <p className="text-sm text-gray-500 font-medium">LinkedIn</p>
-                    <p className="font-semibold">Vasu Mani</p>
+                    <p className="font-semibold">Vasumani L</p>
                   </div>
                 </a>
               </div>
