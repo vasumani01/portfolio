@@ -39,7 +39,7 @@ export function Navbar() {
         <div className="flex items-center justify-between px-2 transition-all duration-300">
           {/* Logo */}
           <a href="#home" className="text-xl font-bold tracking-tighter">
-            <span className="text-blue-400">Vasumani</span>
+            <span className="text-blue-400">Portfolio</span>
            
           </a>
 

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Github } from "lucide-react";
+import { Github, Cpu, Bot, AppWindow, Brain, ExternalLink } from "lucide-react";
 
 const PROJECTS = [
   {
@@ -7,28 +7,32 @@ const PROJECTS = [
     description: "Designed and deployed a real-time face recognition system for high-security environments, enabling automated identity verification, centralized monitoring, and blacklist-based alerts with 95%+ accuracy. Built with scalable REST APIs and a PostgreSQL-backed architecture.",
     tech: ["Python", "OpenCV", "FastAPI", "PostgreSQL", "TensorFlow"],
     github: "https://github.com/vasumani01/AI-Face-Recognition",
-    color: "from-blue-500/20 to-cyan-500/20"
+    color: "blue",
+    icon: <Cpu className="w-6 h-6 text-blue-400" />
   },
   {
     title: "AI SEO Agent",
     description: "Architected a self-hosted AI automation agent to generate and publish 4+ SEO-optimized blogs per month. Integrated search analytics, generative AI, and automated workflows with editorial approval via Telegram and seamless cloud-based publishing.",
-    tech: ["n8n", "Docker", "OpenAI API", "PostgreSQL", "Supabase", "Telegram Bot"],
+    tech: ["n8n", "Docker", "OpenAI API", "PostgreSQL", "Supabase", "Telegram"],
     github: "https://github.com/vasumani01/AI--SEO--agent",
-    color: "from-purple-500/20 to-pink-500/20"
+    color: "purple",
+    icon: <Bot className="w-6 h-6 text-purple-400" />
   },
   {
     title: "Employee Management System",
     description: "Built a full-featured, responsive web application to streamline employee data management and organizational workflows. Scalable platform handling 100+ employee records, deployed on Vercel with CI/CD pipeline for fast load times and continuous delivery.",
     tech: ["HTML5", "CSS3", "JavaScript", "React.js", "Vercel"],
     github: "https://github.com/vasumani01",
-    color: "from-green-500/20 to-emerald-500/20"
+    color: "emerald",
+    icon: <AppWindow className="w-6 h-6 text-emerald-400" />
   },
   {
     title: "Emotion Detection",
     description: "Machine learning model that detects human emotions from facial expressions using deep learning. Trained on image datasets to accurately classify emotions in real-time for human-computer interaction applications.",
     tech: ["Python", "Machine Learning", "Deep Learning", "Jupyter Notebook"],
     github: "https://github.com/vasumani01/Emotion-Detection",
-    color: "from-orange-500/20 to-yellow-500/20"
+    color: "orange",
+    icon: <Brain className="w-6 h-6 text-orange-400" />
   }
 ];
 
@@ -71,45 +75,54 @@ export function Projects() {
                 }
               }}
               style={{ transformStyle: "preserve-3d" }}
-              className="glass rounded-3xl overflow-hidden group relative flex flex-col h-full border border-glass-border transition-all duration-300 shadow-[0_0_15px_rgba(0,0,0,0.5)]"
+              className="glass rounded-3xl overflow-hidden group relative flex flex-col h-full border border-glass-border transition-shadow shadow-lg"
             >
-              {/* Static background instead of hover gradient */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-20 -z-10`}></div>
+              {/* Subtle accent glow line at the top */}
+              <div className={`absolute top-0 left-0 right-0 h-1 bg-${project.color}-500 opacity-50`}></div>
               
-              <div className="p-8 flex-grow flex flex-col z-10" style={{ transformStyle: "preserve-3d", transform: "translateZ(30px)" }}>
-                <motion.div variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }} className="flex justify-between items-start mb-6">
-                  <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center border border-white/10">
-                    <Github className="w-6 h-6 text-gray-300" />
+              <div className="p-8 md:p-10 flex-grow flex flex-col z-10">
+                
+                {/* Header: Icon + Title */}
+                <motion.div variants={{ hidden: { opacity: 0, y: 10 }, visible: { opacity: 1, y: 0 } }} className="flex flex-col sm:flex-row sm:items-center gap-5 mb-8 border-b border-white/10 pb-6">
+                  <div className={`w-14 h-14 shrink-0 rounded-2xl bg-${project.color}-500/10 flex items-center justify-center border border-${project.color}-500/20 shadow-inner`}>
+                    {project.icon}
                   </div>
-                  <div className="flex gap-4">
+                  <div>
+                    <h3 className="text-2xl font-bold text-white tracking-wide">
+                      {project.title}
+                    </h3>
+                  </div>
+                </motion.div>
+
+                {/* Body: Description */}
+                <motion.p variants={{ hidden: { opacity: 0, y: 10 }, visible: { opacity: 1, y: 0 } }} className="text-gray-300 text-base leading-relaxed mb-8 flex-grow">
+                  {project.description}
+                </motion.p>
+
+                {/* Footer: Tech Stack + Links */}
+                <motion.div variants={{ hidden: { opacity: 0, scale: 0.95 }, visible: { opacity: 1, scale: 1 } }} className="flex flex-col gap-8 mt-auto">
+                  <div className="flex flex-wrap gap-2.5">
+                    {project.tech.map((tech, tIdx) => (
+                      <span 
+                        key={tIdx}
+                        className="text-sm font-medium px-4 py-1.5 rounded-lg bg-black/40 text-gray-200 border border-white/5 shadow-sm"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                  
+                  <div className="flex items-center gap-6 pt-6 border-t border-white/10">
                     <a 
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-400 transition-all"
+                      className="flex items-center gap-2.5 text-sm font-semibold text-gray-400 transition-colors uppercase tracking-widest"
                     >
-                      <Github size={20} />
+                      <Github size={18} />
+                      Source Code
                     </a>
                   </div>
-                </motion.div>
-
-                <motion.h3 variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }} className="text-2xl font-bold mb-3 text-white transition-all">
-                  {project.title}
-                </motion.h3>
-                
-                <motion.p variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }} className="text-gray-400 text-base leading-relaxed mb-8 flex-grow">
-                  {project.description}
-                </motion.p>
-
-                <motion.div variants={{ hidden: { opacity: 0, scale: 0.8 }, visible: { opacity: 1, scale: 1 } }} className="flex flex-wrap gap-2 mt-auto">
-                  {project.tech.map((tech, tIdx) => (
-                    <span 
-                      key={tIdx}
-                      className="text-xs font-medium px-3 py-1 rounded-full bg-black/40 text-gray-300 border border-white/5"
-                    >
-                      {tech}
-                    </span>
-                  ))}
                 </motion.div>
               </div>
             </motion.div>
